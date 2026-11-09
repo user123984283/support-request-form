@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Служба підтримки</title>
+</head>
+<body>
+    <h1>Форма звернення до служби підтримки</h1>
+
+    <form id="supportForm">
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+
+        <label for="topic">Тема звернення:</label>
+        <select id="topic">
+            <option value="">Оберіть тему</option>
+            <option value="technical">Технічна проблема</option>
+            <option value="account">Обліковий запис</option>
+            <option value="other">Інше</option>
+        </select>
+
+        <label for="message">Опис проблеми:</label>
+        <textarea id="message"></textarea>
+
+        <button type="submit">Надіслати</button>
+    </form>
+</body>
+</html>
