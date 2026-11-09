@@ -82,5 +82,39 @@
 
         <button type="submit">Надіслати</button>
     </form>
+
+<script>
+document.getElementById("supportForm")
+    .addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name")
+            .value.trim();
+        const email = document.getElementById("email")
+            .value.trim();
+        const topic = document.getElementById("topic")
+            .value;
+        const message = document.getElementById("message")
+            .value.trim();
+
+        if (name.length < 2) {
+            alert("Ім'я має містити мінімум 2 символи.");
+            return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            alert("Введіть коректну електронну адресу.");
+            return;
+        }
+
+        if (topic === "" || message.length < 10) {
+            alert("Оберіть тему та введіть опис від 10 символів.");
+            return;
+        }
+
+        alert("Ваше звернення прийнято!");
+        document.getElementById("supportForm").reset();
+    });
+</script>
 </body>
 </html>
